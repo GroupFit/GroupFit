@@ -22,6 +22,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".GroupDetailActivity"></activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity
+            android:name=".BodyBuildingActivity"
+            android:label="@string/title_activity_body_building"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 

@@ -21,4 +21,9 @@
         <item name="android:layout_marginBottom">3dp</item>
     </style>
 
+    <style parent="Widget.AppCompat.Button.Borderless" name="ButtonDetailStyle">
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+
 </resources>

@@ -1,37 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/margin">
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/group_image"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text = "Group Title"
-        android:id="@+id/title"
-        style="@style/GroupTextViewStyle"
-        android:layout_toEndOf="@id/group_image"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/group_main_activity"
-        android:text="Group Activity"
-        android:layout_below="@+id/title"
-        android:layout_toEndOf="@id/group_image"
-        style="@style/GroupTextViewStyle"
-        />
-    <ViewAnimator
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/margin"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/group_card_view">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/background_dark">
-    </ViewAnimator>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="227dp"
+            android:id="@+id/group_image_holder"
+            android:background="@drawable/new_york">
 
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/title"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Parkour in NY"
+                android:textColor="@android:color/white"
+                android:textSize="50dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+
+
+            >
+
+            <TextView
+                android:id="@+id/group_activity_1"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+
+                />
+
+            <TextView
+                android:id="@+id/group_activity_2"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Running through the 6"
+                android:textColor="@android:color/white"
+
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Super Marathon"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ButtonDetailStyle"
+                android:text="preview"
+                android:textColor="@color/color_state_button"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                style="@style/ButtonDetailStyle"
+                android:textColor="@color/color_state_button"
+                android:text="Join"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -14,8 +14,29 @@ import android.view.MenuItem;
 
 import momocorp.groupfit.Adapters.GroupInfoAdaper;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements Universal.FragmentInterface
+{
     RecyclerView group_info_recycler;
+    public enum Fragments {
+        details("details");
+
+        Fragments(String s) {
+            this.s = s;
+        }
+        String s;
+
+    }
+
+    @Override
+    public void detailGroupFragment() {
+        //create detailfragment here
+        DetailGroupFragment detailGroupFragment = DetailGroupFragment.newInstance();
+        getFragmentManager().beginTransaction().replace(R.id.include, detailGroupFragment).
+                addToBackStack(Fragments.details.name()).commit();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         });
         group_info_recycler = (RecyclerView) findViewById(R.id.group_recycler_view);
         group_info_recycler.setLayoutManager(new LinearLayoutManager(this));
-        group_info_recycler.setAdapter(new GroupInfoAdaper());
+        group_info_recycler.setAdapter(new momocorp.groupfit.GroupInfoAdaper(this));
 
 
     }
