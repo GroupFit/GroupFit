@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import momocorp.groupfit.Adapters.GroupInfoAdaper;
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView group_info_recycler;
     @Override
@@ -60,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void intentToDetail(View view) {
         Intent i = new Intent(this, GroupDetailActivity.class);
+        startActivity(i);
+    }
+
+    public void toLogin(View view) {
+        Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
     }
 }

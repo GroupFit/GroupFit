@@ -1,4 +1,4 @@
-package momocorp.groupfit;
+package momocorp.groupfit.Adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,11 +7,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import momocorp.groupfit.R;
+
 /**
  * Created by Pablo on 3/24/2017.
  */
 
-class GroupInfoAdaper extends RecyclerView.Adapter<GroupInfoAdaper.GroupInfoHolder> {
+public class GroupInfoAdaper extends RecyclerView.Adapter<GroupInfoAdaper.GroupInfoHolder> {
 
 
     @Override

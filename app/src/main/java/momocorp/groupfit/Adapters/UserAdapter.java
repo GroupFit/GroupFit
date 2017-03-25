@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import momocorp.groupfit.CircleTransform;
 import momocorp.groupfit.Classes.User;
 import momocorp.groupfit.R;
 
@@ -36,7 +37,7 @@ public class UserAdapter extends ArrayAdapter<User> {
         }
         TextView tvUserName = (TextView)convertView.findViewById(R.id.tvUserName);
         ImageView ivUserImage = (ImageView) convertView.findViewById(R.id.ivUserImage);
-        Picasso.with(getContext()).load(user.pic_uri).fit().centerCrop().placeholder(R.drawable.ic_user_icon).error(R.drawable.ic_user_icon).into(ivUserImage);
+        Picasso.with(getContext()).load(user.pic_uri).fit().transform(new CircleTransform()).centerCrop().placeholder(R.drawable.ic_user_icon).error(R.drawable.ic_user_icon).into(ivUserImage);
         tvUserName.setText(user.name);
         return convertView;
     }
