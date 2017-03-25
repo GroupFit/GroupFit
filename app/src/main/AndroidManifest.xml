@@ -20,7 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".GroupDetailActivity"></activity>
+        <activity android:name=".GroupDetailActivity" />
+        <activity
+            android:name=".BodyBuildingActivity"
+            android:label="@string/title_activity_body_building"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
