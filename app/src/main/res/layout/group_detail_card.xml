@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/other_group_user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:id="@+id/linearLayout"
+            android:layout_above="@+id/group_divider"
+            android:layout_toEndOf="@+id/other_group_user_image"
+            android:layout_marginBottom="14dp">
+            <TextView
+                android:id="@+id/other_group_user_name"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignStart="@+id/linearLayout"
+
+                android:text="Kristina"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/other_group_user_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="475 points"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/standard_divider_color"
+            android:layout_below="@id/other_group_user_image"
+            android:layout_margin="5dp"
+            android:id="@+id/group_divider"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preview"
+            style="@style/ButtonDetailStyle"
+            android:layout_alignTop="@+id/group_divider"
+            android:layout_alignEnd="@+id/group_divider" />
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
