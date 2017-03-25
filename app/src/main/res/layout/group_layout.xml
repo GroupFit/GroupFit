@@ -4,14 +4,14 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/margin"
-    app:cardElevation="5dp"
     android:layout_margin="5dp"
-    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@android:color/white"
     android:id="@+id/group_card_view">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@android:color/white">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="227dp"
@@ -19,37 +19,41 @@
             android:background="@drawable/new_york">
 
 
+
             <TextView
+                android:background="#961b1b1b"
+                android:paddingLeft="15dp"
                 android:id="@+id/title"
                 style="@style/TextAppearance.AppCompat.Headline"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
                 android:text="Parkour in NY"
+                android:textSize="28sp"
                 android:textColor="@android:color/white"
-                android:textSize="50dp" />
+                android:textAllCaps="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"/>
+
 
 
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="341dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="end"
-
-
-            >
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="12dp">
 
             <TextView
+                android:layout_marginTop="5dp"
                 android:id="@+id/group_activity_1"
                 style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Upcoming Events"
-                android:textColor="@android:color/white"
                 android:textSize="16sp"
+                android:layout_marginBottom="4dp"
 
                 />
 
@@ -59,8 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Running through the 6"
-                android:textColor="@android:color/white"
-
+                android:layout_marginBottom="2dp"
                 />
 
             <TextView
@@ -68,12 +71,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Super Marathon"
-                android:textColor="@android:color/white" />
+                android:textSize="15sp"
+                />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
@@ -81,13 +86,11 @@
                 android:layout_height="wrap_content"
                 style="@style/ButtonDetailStyle"
                 android:text="preview"
-                android:textColor="@color/color_state_button"/>
+                />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
                 style="@style/ButtonDetailStyle"
-                android:textColor="@color/color_state_button"
                 android:text="Join"/>
         </LinearLayout>
 

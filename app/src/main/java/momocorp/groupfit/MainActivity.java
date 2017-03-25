@@ -8,14 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import momocorp.groupfit.Adapters.GroupInfoAdaper;
 
-
-public class MainActivity extends AppCompatActivity implements Universal.FragmentInterface
+public class
+MainActivity extends AppCompatActivity implements Universal.FragmentInterface
 {
     RecyclerView group_info_recycler;
     public enum Fragments {
@@ -43,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements Universal.Fragmen
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("What's Happening");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

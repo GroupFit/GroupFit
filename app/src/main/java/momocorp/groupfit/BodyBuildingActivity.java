@@ -10,8 +10,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 
+import momocorp.groupfit.Classes.User;
+
 public class BodyBuildingActivity extends AppCompatActivity {
-    LoginActivity.UserInformation userInformation;
+    User userInformation;
 
 
     @Override

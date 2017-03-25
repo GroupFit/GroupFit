@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                                 + loginResult.getAccessToken().getToken()
                 );
 
+
             }
 
             @Override
