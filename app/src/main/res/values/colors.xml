@@ -10,4 +10,7 @@
     <color name="pale_orange">#F17F29</color>
     <color name="standard_divider_color">#FAFAFA</color>
     <color name="colorUntouched">#FFCC80</color>
+    <color name="colorBodyBuild">#E0F2F1</color>
+    <color name="login_background">#FF9800</color>
+    <color name="backgroundButtonColor">#039BE5</color>
 </resources>

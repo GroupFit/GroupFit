@@ -15,7 +15,7 @@ import static momocorp.groupfit.Universal.getRoundedRectBitmap;
  * Created by cameronlewis on 3/25/17.
  */
 
-class GroupDetailAdapter extends RecyclerView.Adapter<GroupDetailAdapter.GroupDetViewHolder> {
+public class GroupDetailAdapter extends RecyclerView.Adapter<GroupDetailAdapter.GroupDetViewHolder> {
     Context context;
     Bitmap resized;
     Bitmap conv_bm;

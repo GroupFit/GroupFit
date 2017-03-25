@@ -43,26 +43,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="5dp"
-            android:paddingLeft="12dp">
+            android:padding="12dp">
 
-            <TextView
-                android:layout_marginTop="5dp"
-                android:id="@+id/group_activity_1"
-                style="@style/TextAppearance.AppCompat.Caption"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Upcoming Events"
-                android:textSize="16sp"
-                android:layout_marginBottom="4dp"
 
-                />
 
             <TextView
                 android:id="@+id/group_activity_2"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Running through the 6"
+                android:text="December 5, 2017"
                 android:layout_marginBottom="2dp"
                 />
 
@@ -70,7 +60,8 @@
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Super Marathon"
+                android:id="@+id/event_location"
+                android:text="Madison Square Garden"
                 android:textSize="15sp"
                 />
 
@@ -85,12 +76,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/ButtonDetailStyle"
+                android:id="@+id/see_preview"
                 android:text="preview"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/ButtonDetailStyle"
+                android:id="@+id/join_group"
                 android:text="Join"/>
         </LinearLayout>
 

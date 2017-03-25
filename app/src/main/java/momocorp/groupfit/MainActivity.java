@@ -2,6 +2,7 @@ package momocorp.groupfit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import momocorp.groupfit.Adapters.GroupInfoAdapter;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -12,10 +13,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class
-MainActivity extends AppCompatActivity implements Universal.FragmentInterface
+MainActivity extends AppCompatActivity implements Universal.UniversalInterface
 {
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     RecyclerView group_info_recycler;
     public enum Fragments {
         details("details");
@@ -30,9 +36,9 @@ MainActivity extends AppCompatActivity implements Universal.FragmentInterface
     @Override
     public void detailGroupFragment() {
         //create detailfragment here
-        DetailGroupFragment detailGroupFragment = DetailGroupFragment.newInstance();
-        getFragmentManager().beginTransaction().replace(R.id.include, detailGroupFragment).
-                addToBackStack(Fragments.details.name()).commit();
+        Intent intent = new Intent(MainActivity.this, GroupDetailActivity.class);
+        startActivity(intent);
+
     }
 
 
@@ -42,19 +48,20 @@ MainActivity extends AppCompatActivity implements Universal.FragmentInterface
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("What's Happening");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
         group_info_recycler = (RecyclerView) findViewById(R.id.group_recycler_view);
         group_info_recycler.setLayoutManager(new LinearLayoutManager(this));
-        group_info_recycler.setAdapter(new momocorp.groupfit.GroupInfoAdaper(this));
+        group_info_recycler.setAdapter(new GroupInfoAdapter(this));
 
 
     }

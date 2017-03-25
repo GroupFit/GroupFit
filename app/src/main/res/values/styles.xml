@@ -21,9 +21,18 @@
         <item name="android:layout_marginBottom">3dp</item>
     </style>
 
-    <style parent="Widget.AppCompat.Button.Borderless" name="ButtonDetailStyle">
+    <style name="ButtonDetailStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textColor">@color/colorPrimary</item>
 
+    </style>
+
+    <style parent="Widget.Design.TextInputLayout" name="CustomTextInputLayout">
+        <item name="@android:textColor">@android:color/white</item>
+    </style>
+    <style parent="Widget.AppCompat.EditText" name="CustomEditText">
+        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@color/backgroundButtonColor</item>
+        <item name="colorControlHighlight">#29B6F6</item>
     </style>
 
 </resources>

@@ -54,15 +54,4 @@
         app:srcCompat="@drawable/ic_add_white_24dp"/>
 
 
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:text="Login activity"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center_horizontal"
-        android:onClick="toLogin"/>
-
 </android.support.design.widget.CoordinatorLayout>

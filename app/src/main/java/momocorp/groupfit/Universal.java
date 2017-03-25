@@ -2,6 +2,7 @@ package momocorp.groupfit;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -14,8 +15,28 @@ import android.support.v7.graphics.Palette;
  */
 
 public class Universal {
-    interface FragmentInterface {
+    public enum FragmentTags {
+        user("User"),
+        bodybuild("bodyBuilding");
+
+        FragmentTags(String s) {
+            this.s = s;
+        }
+
+        String s;
+    }
+
+    public enum FragmentName {
+        bodybuild("bb"), signup("sign_up_log_in");
+
+        FragmentName(String bb) {
+            this.bb = bb;
+        }
+        String bb;
+    }
+    public interface UniversalInterface {
         public void detailGroupFragment();
+
     }
 
     public static Palette getPaletteSwatches(Bitmap bitmap) {
@@ -44,5 +65,11 @@ public class Universal {
         } catch (OutOfMemoryError o) {
         }
         return result;
+    }
+
+    public static Bitmap resize(int width, int height, int photolocation, Context context) {
+        Bitmap bm = BitmapFactory.decodeResource(context.getResources(), photolocation);
+        Bitmap bitmap = Bitmap.createScaledBitmap(bm, width, height, false);
+        return bitmap;
     }
 }
