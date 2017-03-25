@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements Universal.Fragmen
         });
         group_info_recycler = (RecyclerView) findViewById(R.id.group_recycler_view);
         group_info_recycler.setLayoutManager(new LinearLayoutManager(this));
-        group_info_recycler.setAdapter(new GroupInfoAdaper(this));
+        group_info_recycler.setAdapter(new momocorp.groupfit.GroupInfoAdaper(this));
 
 
     }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "928254053295",
+    "firebase_url": "https://gitout-d9c2b.firebaseio.com",
+    "project_id": "gitout-d9c2b",
+    "storage_bucket": "gitout-d9c2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928254053295:android:8e3c13aa97ef7ea1",
+        "android_client_info": {
+          "package_name": "momocorp.groupfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928254053295-5ds74tl6t6q93t8dg8p21mvm2m0v4ist.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGgM8mTdu9H4TT_Vko6fXAlkQvmt5NLpI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
