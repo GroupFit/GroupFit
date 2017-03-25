@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -21,13 +22,17 @@ class GroupDetailAdapter extends RecyclerView.Adapter<GroupDetailAdapter.GroupDe
     public GroupDetailAdapter(Context context) {
         this.context = context; Bitmap bm = BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.kristina);
-         resized = Bitmap.createScaledBitmap(bm, 100, 100, true);
-         conv_bm = getRoundedRectBitmap(resized, 100);
+        int val = (int) context.getResources().getDimension(R.dimen.detail_profile_size);
+
+        resized = Bitmap.createScaledBitmap(bm, val, val, true);
+         conv_bm = getRoundedRectBitmap(resized, 100, context, 100);
     }
 
     @Override
     public GroupDetViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.group_detail_card, parent, false);
+
+        return new GroupDetViewHolder(view);
     }
 
     @Override
@@ -35,6 +40,7 @@ class GroupDetailAdapter extends RecyclerView.Adapter<GroupDetailAdapter.GroupDe
     public void onBindViewHolder(GroupDetViewHolder holder, int position) {
 
         holder.userProfile.setImageBitmap(conv_bm);
+
 
     }
 

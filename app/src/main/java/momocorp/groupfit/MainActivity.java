@@ -12,8 +12,28 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Universal.FragmentInterface
+{
     RecyclerView group_info_recycler;
+    public enum Fragments {
+        details("details");
+
+        Fragments(String s) {
+            this.s = s;
+        }
+        String s;
+
+    }
+
+    @Override
+    public void detailGroupFragment() {
+        //create detailfragment here
+        DetailGroupFragment detailGroupFragment = DetailGroupFragment.newInstance();
+        getFragmentManager().beginTransaction().replace(R.id.include, detailGroupFragment).
+                addToBackStack(Fragments.details.name()).commit();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
         group_info_recycler = (RecyclerView) findViewById(R.id.group_recycler_view);
         group_info_recycler.setLayoutManager(new LinearLayoutManager(this));
-        group_info_recycler.setAdapter(new GroupInfoAdaper());
+        group_info_recycler.setAdapter(new GroupInfoAdaper(this));
 
 
     }
@@ -41,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(getFragmentManager().getBackStackEntryCount()>0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
@@ -58,8 +88,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void intentToDetail(View view) {
-        Intent i = new Intent(this, GroupDetailActivity.class);
-        startActivity(i);
-    }
-}
+  }
+

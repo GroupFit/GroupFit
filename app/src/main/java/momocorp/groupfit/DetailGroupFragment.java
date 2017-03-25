@@ -4,7 +4,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,9 +60,9 @@ public class DetailGroupFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail_group, container, false);
-        RecyclerView groupRecycler = (RecyclerView) inflater.
-                inflate(R.layout.fragment_detail_group, container, false);
-        groupRecycler.setAdapter(new GroupDetailAdapter(getContext()));
+        RecyclerView groupRecycler = (RecyclerView) view.findViewById(R.id.detail_group_recycler_view);
+        groupRecycler.setAdapter(new GroupDetailAdapter(getActivity()));
+        groupRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         return view;
 

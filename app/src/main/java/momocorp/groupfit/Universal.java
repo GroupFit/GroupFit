@@ -1,22 +1,32 @@
 package momocorp.groupfit;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.support.v7.graphics.Palette;
 
 /**
  * Created by cameronlewis on 3/25/17.
  */
 
 public class Universal {
+    interface FragmentInterface {
+        public void detailGroupFragment();
+    }
 
-    public static Bitmap getRoundedRectBitmap(Bitmap bitmap, int pixels) {
+    public static Palette getPaletteSwatches(Bitmap bitmap) {
+        return Palette.from(bitmap).generate();
+
+    }
+
+    public static Bitmap getRoundedRectBitmap(Bitmap bitmap, int pixels, Context context, int size) {
         Bitmap result = null;
         try {
-            result = Bitmap.createBitmap(200, 200, Bitmap.Config.ARGB_8888);
+            result = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(result);
 
             int color = 0xff424242;
