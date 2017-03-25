@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import momocorp.groupfit.Adapters.GroupInfoAdaper;
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView group_info_recycler;
     @Override
