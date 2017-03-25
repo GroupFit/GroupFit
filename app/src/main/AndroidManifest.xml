@@ -26,5 +26,6 @@
             android:label="@string/title_activity_body_building"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
